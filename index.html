@@ -2,11 +2,33 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Title of the document</title>
+<title>Inicio de sesión</title>
 </head>
+<script type="text/javascript">
 
-<body>
-Content of the document......
+  function validando(){
+  var Usuario = document.getElementById("Usuario").value;
+  var Contraseña = document.getElementById("Contraseña").value;
+  if (Usuario==Contraseña){
+    alert("Usuario y contraseña correctos");
+    document.form.submit();
+  }else {
+    alert("Ops, al parecer el usuario o contraseña están mal")
+  }
+}
+</script>
+<body style="background-color:#AED6F1">
+  <center>
+  <h1>MyCHAT</h1>
+<p>Usuario</p>
+<input type="text" name="Usuario" id="Usuario">
+<p>Contraseña</p>
+<input type="password" name ="Contraseña" id="Contraseña">
+<br>
+<br>
+<input type="button" value="LOG IN" onclick="validando()" id="Subir"/>
+</center>
+
 </body>
 
 </html>
